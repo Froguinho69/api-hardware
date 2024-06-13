@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "1d489c3f-f797-4918-b3d4-93f6d037fd9f",
+		"name": "API-Informações de hardware",
+		"description": "API que armazena em um banco de dados especificações de componentes de computador (Hardware), e possibilita que os usuários realizem buscas e comparações.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33176036"
+	},
+	"item": [
+		{
+			"name": "armazenamento",
+			"item": [
+				{
+					"name": "armazenamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/armazenamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"armazenamentos"
+							]
+						},
+						"description": "Busca todos os armazenamentos cadastrados no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "armazenamento id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/armazenamentos/666921a26ab0e306545e7e6f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"armazenamentos",
+								"666921a26ab0e306545e7e6f"
+							]
+						},
+						"description": "Busca um armazenamento especifico atravéz do ID."
+					},
+					"response": []
+				},
+				{
+					"name": "armazenamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"HD\",\r\n    \"fabricante\": \"Grenn\",\r\n    \"tipo\": \"Sata\",\r\n    \"capacidade\": \"1 tb\",\r\n    \"interface\": \"mbr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/armazenamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"armazenamentos"
+							]
+						},
+						"description": "Utilizado pelo ADM para adicionar informações de um novo armazenamento ao banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "armazenamento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"HD\",\r\n    \"fabricante\": \"Grenn\",\r\n    \"tipo\": \"Sata\",\r\n    \"capacidade\": \"2 tb\",\r\n    \"interface\": \"mbr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/armazenamentos/666921a26ab0e306545e7e6f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"armazenamentos",
+								"666921a26ab0e306545e7e6f"
+							]
+						},
+						"description": "Utilizado pelo ADM para atualizar informações no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "armazenamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/armazenamentos/6669218a6ab0e306545e7e6d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"armazenamentos",
+								"6669218a6ab0e306545e7e6d"
+							]
+						},
+						"description": "Utilizado pelo ADM para apagar as informações do banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "comparar armazenamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/armazenamentos/compare/666921a26ab0e306545e7e6f/666b4be0c7a49b43bdb9681b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"armazenamentos",
+								"compare",
+								"666921a26ab0e306545e7e6f",
+								"666b4be0c7a49b43bdb9681b"
+							]
+						},
+						"description": "Utilizado pelo usuário para realizar uma busca simultânea de 2 itens cadastrados no banco de dados."
+					},
+					"response": []
+				}
+			],
+			"description": "Lista de especificações dos modelos de armazenamentos cadastrados no banco de dados."
+		},
+		{
+			"name": "fonte",
+			"item": [
+				{
+					"name": "fonte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/fontes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fontes"
+							]
+						},
+						"description": "Busca todas as fontes cadastradas no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "fonte id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/fontes/66691b41a94f499369c6c312",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fontes",
+								"66691b41a94f499369c6c312"
+							]
+						},
+						"description": "Busca uma fonte especifica atravéz do ID."
+					},
+					"response": []
+				},
+				{
+					"name": "fonte",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"MAG\",\r\n    \"fabricante\": \"MSI\",\r\n    \"Potencia\": \"650w\",\r\n    \"certificado\": \"80 plus\",\r\n    \"modular\": \"não\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/fontes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fontes"
+							]
+						},
+						"description": "Utilizado pelo ADM para adicionar informações de uma nova fonte ao banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "fonte",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"MAG\",\r\n    \"fabricante\": \"MSI\",\r\n    \"Potencia\": \"650w\",\r\n    \"certificado\": \"80 plus\",\r\n    \"modular\": \"não\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"description": "Utilizado para atualizar informações de uma fonte cadastrada no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "fonte",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/fontes/66691a6e88af4adf553bb0de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fontes",
+								"66691a6e88af4adf553bb0de"
+							]
+						},
+						"description": "Utilizado para remover informações de uma fonte cadastrada no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "comparar fonte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/fontes/compare/66691b41a94f499369c6c312/66691b46a94f499369c6c314",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fontes",
+								"compare",
+								"66691b41a94f499369c6c312",
+								"66691b46a94f499369c6c314"
+							]
+						},
+						"description": "Utilizado pelo usuário para realizar uma busca simultânea de 2 itens cadastrados no banco de dados."
+					},
+					"response": []
+				}
+			],
+			"description": "Lista de especificações dos modelos de armazenamentos cadastrados no banco de dados."
+		},
+		{
+			"name": "memoria Ram",
+			"item": [
+				{
+					"name": "memoria Ram",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/memoriaram",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"memoriaram"
+							]
+						},
+						"description": "Busca todas as memorias ram cadastradas no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "memoria Ram id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/memoriaram/666b1d1b00e2f90db6719012",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"memoriaram",
+								"666b1d1b00e2f90db6719012"
+							]
+						},
+						"description": "Busca uma memoria ram especifica atravéz do ID."
+					},
+					"response": []
+				},
+				{
+					"name": "memoria Ram",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\":\"FURY Beast\",\r\n    \"fabricante\":\"Kingston\",\r\n    \"capacidade\":\"8gb\",\r\n    \"tipo\":\"DDR5\",\r\n    \"velocidade\":\"5600MHz\",\r\n    \"latencia\": \"CL40\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/memoriaram",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"memoriaram"
+							]
+						},
+						"description": "Utilizado pelo ADM para adicionar informações de uma nova memoria ram ao banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "memoria Ram",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\":\"FURY Beast\",\r\n    \"fabricante\":\"Kingston\",\r\n    \"capacidade\":\"16gb\",\r\n    \"tipo\":\"DDR5\",\r\n    \"velocidade\":\"5600MHz\",\r\n    \"latencia\": \"CL40\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/memoriaram/666b1dbb00e2f90db6719014",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"memoriaram",
+								"666b1dbb00e2f90db6719014"
+							]
+						},
+						"description": "Utilizado para atualizar informações de uma memoria ram cadastrada no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "memoria Ram",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/memoriaram/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"memoriaram",
+								""
+							]
+						},
+						"description": "Utilizado para remover informações de uma memoria ram cadastrada no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "comparar memoria Ram",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Utilizado pelo usuário para realizar uma busca simultânea de 2 itens cadastrados no banco de dados."
+					},
+					"response": []
+				}
+			],
+			"description": "Lista de especificações dos modelos de memorias ram cadastradas no banco de dados."
+		},
+		{
+			"name": "placa de video",
+			"item": [
+				{
+					"name": "placa de video",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/placasdevideo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"placasdevideo"
+							]
+						},
+						"description": "Busca todas as placas de vídeo cadastradas no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "placa de video id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/placasdevideo/666b149b9922db7aee51a8ec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"placasdevideo",
+								"666b149b9922db7aee51a8ec"
+							]
+						},
+						"description": "Busca uma placa de vídeo especifica atravéz do ID."
+					},
+					"response": []
+				},
+				{
+					"name": "placa de video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"RX 7700 XT\",\r\n    \"fabricante\": \"AMD\",\r\n    \"memoria\": \"12 gb\",\r\n    \"clock\": \"4.0 ghz\",\r\n    \"consumo\": \"200 tdp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/placasdevideo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"placasdevideo"
+							]
+						},
+						"description": "Utilizado pelo ADM para adicionar informações de uma nova placa de vídeo ao banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "placa de video",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"description": "Utilizado para atualizar informações de uma placa de vídeo cadastrada no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "placa de video",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/placasdevideo/666a073c6c9594c9dc6bc022",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"placasdevideo",
+								"666a073c6c9594c9dc6bc022"
+							]
+						},
+						"description": "Utilizado para remover informações de uma placa de vídeo cadastrada no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "comparar placa de video",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/placasdevideo/compare/666b149b9922db7aee51a8ec/666b14f19922db7aee51a8f3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"placasdevideo",
+								"compare",
+								"666b149b9922db7aee51a8ec",
+								"666b14f19922db7aee51a8f3"
+							]
+						},
+						"description": "Utilizado pelo usuário para realizar uma busca simultânea de 2 itens cadastrados no banco de dados."
+					},
+					"response": []
+				}
+			],
+			"description": "Lista de especificações dos modelos de placas de vídeo cadastradas no banco de dados."
+		},
+		{
+			"name": "processador",
+			"item": [
+				{
+					"name": "processador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/processadores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"processadores"
+							]
+						},
+						"description": "Busca todos os processadores cadastrados no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "processador id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/processadores/666923106ab0e306545e7e73",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"processadores",
+								"666923106ab0e306545e7e73"
+							]
+						},
+						"description": "Busca um processador especifica atravéz do ID."
+					},
+					"response": []
+				},
+				{
+					"name": "processador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\":\"Ryzen 5 5600\",\r\n    \"fabricante\": \"AMD\",\r\n    \"nucelos\": 6,\r\n    \"threads\": 12,\r\n    \"clockbase\": \"3.4\",\r\n    \"clockturbo\": \"4.2\",\r\n    \"consumo\": \"65 tdp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/processadores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"processadores"
+							]
+						},
+						"description": "Utilizado pelo ADM para adicionar informações de um novo processador ao banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "processador",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"description": "Utilizado para atualizar informações de um processador cadastrado no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "processador",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/processadores/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"processadores",
+								""
+							]
+						},
+						"description": "Utilizado para remover informações de um processador cadastrado no banco de dados."
+					},
+					"response": []
+				},
+				{
+					"name": "comparar processador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/processadores/compare/666923106ab0e306545e7e73/666923216ab0e306545e7e75",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"processadores",
+								"compare",
+								"666923106ab0e306545e7e73",
+								"666923216ab0e306545e7e75"
+							]
+						},
+						"description": "Utilizado pelo usuário para realizar uma busca simultânea de 2 itens cadastrados no banco de dados."
+					},
+					"response": []
+				}
+			],
+			"description": "Lista de especificações dos modelos de processadores cadastrados no banco de dados."
+		}
+	]
+}
